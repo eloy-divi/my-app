@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import { AnimatePresence } from 'framer-motion'
 import Link from 'next/link';
+import Header from '../components/Header'
 import '@/styles/styles.scss';
 
 export default function App({ Component, pageProps, router }) {
@@ -10,6 +11,7 @@ export default function App({ Component, pageProps, router }) {
                 <Link href="/">Home</Link>
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
+                <Header/>
             </div>
             <AnimatePresence mode='wait'>
                 <Component key={router.route} {...pageProps} />
